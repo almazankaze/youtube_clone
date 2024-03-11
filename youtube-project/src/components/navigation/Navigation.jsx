@@ -9,13 +9,16 @@ import Logo from "../logo/Logo";
 
 import "./navigation.scss";
 
-const Navigation = () => {
+const Navigation = ({ setSidebar }) => {
   return (
     <Fragment>
       <div className="navbar-container">
         <div className="navbar">
           <div className="navbar-left">
-            <div className="nav-icon nav-menu">
+            <div
+              className="nav-icon nav-menu"
+              onClick={() => setSidebar((prev) => !prev)}
+            >
               <MenuIcon />
             </div>
             <Logo />
